@@ -8,6 +8,11 @@
 import SwiftUI
 
 struct PostsView: View {
+//    @State private var recentsPosts: [Post] = []
+    @State private var createNewPost: Bool = false
+    @EnvironmentObject var postsListViewModel: PostsListViewModel
+    @EnvironmentObject var audioPlayer: AudioPlayer
+    
     var body: some View {
         ScrollView {
             
@@ -28,7 +33,7 @@ struct PostsView: View {
                       )
                       .cornerRadius(10)
                       .shadow(color: .black.opacity(0.25), radius: 1, x: 0, y: 2)
-                    
+                        
                     Button {
                         
                     } label: {
@@ -51,34 +56,13 @@ struct PostsView: View {
             }
             
             // Posts...
-            ReusablePostsView(posts: $recentsPosts)
+            ReusablePostsView()
+                .environmentObject(postsListViewModel)
+                .environmentObject(audioPlayer)
                 .hAlign(.center).vAlign(.center)
-                .overlay(alignment: .bottomTrailing) {
-                    Button {
-                        createNewPost.toggle()
-                    } label: {
-                        Image(systemName: "plus")
-                            .font(.title3)
-                            .fontWeight(.semibold)
-                            .foregroundColor(.white)
-                            .padding(13)
-                            .background(.black,in: Circle())
-                    }
-                    .padding(15)
-                }
-                .toolbar(content: {
-                    ToolbarItem(placement: .navigationBarTrailing) {
-                        NavigationLink {
-                            SearchUserView()
-                        } label: {
-                            Image(systemName: "magnifyingglass")
-                                .tint(.black)
-                                .scaleEffect(0.9)
-                        }
-                    }
-                })
-                .navigationTitle("Post's")
             
+            Spacer()
+                .frame(height: 40)
         }
     }
 }

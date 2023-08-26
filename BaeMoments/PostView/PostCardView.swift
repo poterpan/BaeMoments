@@ -11,6 +11,9 @@ import Firebase
 import FirebaseStorage
 
 struct PostCardView: View {
+//    @EnvironmentObject var audioPlayer: AudioPlayer
+    @ObservedObject var audioPlayer: AudioPlayer = AudioPlayer()
+
     var post: Post
     /// - Callbacks
     var onUpdate: (Post)->()
@@ -33,10 +36,15 @@ struct PostCardView: View {
                 Text(post.publishedDate.formatted(date: .numeric, time: .shortened))
                     .font(.caption2)
                     .foregroundColor(.gray)
-                Text(post.text)
-                    .textSelection(.enabled)
-                    .padding(.vertical,8)
                 
+                // Post text hidden
+//                Text(post.text)
+//                    .textSelection(.enabled)
+//                    .padding(.vertical,8)
+                
+                // Voices
+                VoicePlayer()
+
                 /// Post Image If Any
                 if let postImageURL = post.imageURL{
                     GeometryReader{
@@ -46,11 +54,16 @@ struct PostCardView: View {
                             .aspectRatio(contentMode: .fill)
                             .frame(width: size.width, height: size.height)
                             .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
+                            .contentShape(Rectangle())
                     }
-                    .frame(height: 200)
+                    .frame(width: 260, height: 180)
+                    .onTapGesture {
+                        print("photo")
+                    }
                 }
                 
-                PostInteraction()
+//                PostInteraction()
+
             }
         }
         .hAlign(.leading)
@@ -58,7 +71,7 @@ struct PostCardView: View {
             /// Displaying Delete Button (if it's Author of that post)
             if post.userUID == userUID{
                 Menu {
-                    Button("Delete Post",role: .destructive,action: deletePost)
+                    Button("删除贴文",role: .destructive,action: deletePost)
                 } label: {
                     Image(systemName: "ellipsis")
                         .font(.caption)
@@ -101,67 +114,104 @@ struct PostCardView: View {
     }
     
     // MARK: Like/Dislike Interaction
+//    @ViewBuilder
+//    func PostInteraction()->some View{
+//        HStack(spacing: 6){
+//            Button(action: {}){
+//                Image(systemName: true ? "hand.thumbsup.fill" : "hand.thumbsup")
+//            }
+//            
+//            Button(action: {}){
+//                Image(systemName: true ? "hand.thumbsdown.fill" : "hand.thumbsdown")
+//            }
+//            .padding(.leading,25)
+//            
+//        }
+//        .foregroundColor(.black)
+//        .padding(.vertical,8)
+//    }
+    
+    // MARK: Voice Player
     @ViewBuilder
-    func PostInteraction()->some View{
-        HStack(spacing: 6){
-            Button(action: likePost){
-                Image(systemName: post.likedIDs.contains(userUID) ? "hand.thumbsup.fill" : "hand.thumbsup")
+    func VoicePlayer()->some View{
+        ZStack {
+            RoundedRectangle(cornerRadius: 12)
+                .frame(height: 42)
+                .foregroundColor(Color(UIColor(red: 0.85, green: 0.85, blue: 0.85, alpha: 1)))
+            HStack {
+                Button(action: {
+                    print("play pressed")
+                    self.audioPlayer.startPlaybackRemote(audioUrl: post.voiceURL)
+                }) {
+                    Image(systemName: self.audioPlayer.isPlaying ? "pause.fill" : "play.fill")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 16)
+                        .foregroundColor(.black)
+                }
+                .padding(10)
+                .padding(.horizontal, 10)
+                
+                Spacer()
+                
+                Image("soundwave")
+                    .resizable()
+                    .scaledToFit()
+                
+                Spacer()
+                
+//                        Text(timeString(time: audioRecorder.recordingDuration))
+//                            .padding(.horizontal, 20)
+                Text("00:00")
+                    .font(.caption)
+                    .padding(.horizontal, 20)
+
             }
-            
-            Text("\(post.likedIDs.count)")
-                .font(.caption)
-                .foregroundColor(.gray)
-            
-            Button(action: dislikePost){
-                Image(systemName: post.dislikedIDs.contains(userUID) ? "hand.thumbsdown.fill" : "hand.thumbsdown")
-            }
-            .padding(.leading,25)
-            
-            Text("\(post.dislikedIDs.count)")
-                .font(.caption)
-                .foregroundColor(.gray)
         }
-        .foregroundColor(.black)
-        .padding(.vertical,8)
+        .onTapGesture {
+            print("inside")
+        }
+        .frame(width: 260, height: 40)
+
     }
     
     /// - Liking Post
-    func likePost(){
-        Task{
-            guard let postID = post.id else{return}
-            if post.likedIDs.contains(userUID){
-                /// Removing User ID From the Array
-                try await Firestore.firestore().collection("Posts").document(postID).updateData([
-                    "likedIDs": FieldValue.arrayRemove([userUID])
-                ])
-            }else{
-                /// Adding User ID To Liked Array and removing our ID from Disliked Array (if Added in prior)
-                try await Firestore.firestore().collection("Posts").document(postID).updateData([
-                    "likedIDs": FieldValue.arrayUnion([userUID]),
-                    "dislikedIDs": FieldValue.arrayRemove([userUID])
-                ])
-            }
-        }
-    }
+//    func likePost(){
+//        Task{
+//            guard let postID = post.id else{return}
+//            if post.likedIDs.contains(userUID){
+//                /// Removing User ID From the Array
+//                try await Firestore.firestore().collection("Posts").document(postID).updateData([
+//                    "likedIDs": FieldValue.arrayRemove([userUID])
+//                ])
+//            }else{
+//                /// Adding User ID To Liked Array and removing our ID from Disliked Array (if Added in prior)
+//                try await Firestore.firestore().collection("Posts").document(postID).updateData([
+//                    "likedIDs": FieldValue.arrayUnion([userUID]),
+//                    "dislikedIDs": FieldValue.arrayRemove([userUID])
+//                ])
+//            }
+//        }
+//    }
     
     /// - Dislike Post
-    func dislikePost(){
-        Task{
-            guard let postID = post.id else{return}
-            if post.dislikedIDs.contains(userUID){
-                /// Removing User ID From the Array
-                try await Firestore.firestore().collection("Posts").document(postID).updateData([
-                    "dislikedIDs": FieldValue.arrayRemove([userUID])
-                ])
-            }else{
-                /// Adding User ID To Liked Array and removing our ID from Disliked Array (if Added in prior)
-                try await Firestore.firestore().collection("Posts").document(postID).updateData([
-                    "likedIDs": FieldValue.arrayRemove([userUID]),
-                    "dislikedIDs": FieldValue.arrayUnion([userUID])
-                ])
-            }
-        }
-    }
+//    func dislikePost(){
+//        Task{
+//            guard let postID = post.id else{return}
+//            if post.dislikedIDs.contains(userUID){
+//                /// Removing User ID From the Array
+//                try await Firestore.firestore().collection("Posts").document(postID).updateData([
+//                    "dislikedIDs": FieldValue.arrayRemove([userUID])
+//                ])
+//            }else{
+//                /// Adding User ID To Liked Array and removing our ID from Disliked Array (if Added in prior)
+//                try await Firestore.firestore().collection("Posts").document(postID).updateData([
+//                    "likedIDs": FieldValue.arrayRemove([userUID]),
+//                    "dislikedIDs": FieldValue.arrayUnion([userUID])
+//                ])
+//            }
+//        }
+//    }
     
     /// - Deleting Post
     func deletePost(){

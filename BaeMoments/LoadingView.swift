@@ -16,7 +16,7 @@ struct LoadingView: View {
                     Rectangle()
                         .fill(.black.opacity(0.25))
                         .ignoresSafeArea()
-                    
+                            
                     ProgressView()
                         .padding(15)
                         .background(.white,in: RoundedRectangle(cornerRadius: 10, style: .continuous))

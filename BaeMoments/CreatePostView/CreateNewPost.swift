@@ -113,7 +113,7 @@ struct CreateNewPost: View {
         .photosPicker(isPresented: $showImagePicker, selection: $photoItem)
         // Convert Image to upload
         .onChange(of: photoItem) { newValue in
-            if let newValue{
+            if let newValue {
                 Task{
                     if let rawImageData = try? await newValue.loadTransferable(type: Data.self),let image = UIImage(data: rawImageData),let compressedImageData = image.jpegData(compressionQuality: 0.5){
                         /// UI Must be done on Main Thread

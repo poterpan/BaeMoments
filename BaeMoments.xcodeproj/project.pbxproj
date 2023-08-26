@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E709C3102A7FFDDA009D5BE2 /* ParingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E709C30F2A7FFDDA009D5BE2 /* ParingView.swift */; };
-		E709C3122A8006E9009D5BE2 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E709C3112A8006E9009D5BE2 /* LoginViewModel.swift */; };
+		E709C3122A8006E9009D5BE2 /* AccountCreationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E709C3112A8006E9009D5BE2 /* AccountCreationViewModel.swift */; };
 		E70DA4CD2A81275900136309 /* LaunchScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70DA4CB2A81275900136309 /* LaunchScreenView.swift */; };
 		E71512802A79738200F2408D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E715127F2A79738200F2408D /* GoogleService-Info.plist */; };
 		E71512822A7975DF00F2408D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71512812A7975DF00F2408D /* LoginView.swift */; };
@@ -18,6 +18,30 @@
 		E715128D2A797C9000F2408D /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71512872A797C9000F2408D /* Login.swift */; };
 		E715128F2A797C9000F2408D /* LoadingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71512892A797C9000F2408D /* LoadingScreen.swift */; };
 		E71512902A797C9000F2408D /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = E715128A2A797C9000F2408D /* Register.swift */; };
+		E72CD04A2A8A3AC000ABF9AB /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = E72CD0492A8A3AC000ABF9AB /* FirebaseAuth */; };
+		E72CD04C2A8A3AC000ABF9AB /* FirebaseAuthCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = E72CD04B2A8A3AC000ABF9AB /* FirebaseAuthCombine-Community */; };
+		E72CD0502A8A3AC000ABF9AB /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = E72CD04F2A8A3AC000ABF9AB /* FirebaseDatabase */; };
+		E72CD0522A8A3AC000ABF9AB /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E72CD0512A8A3AC000ABF9AB /* FirebaseDatabaseSwift */; };
+		E72CD0542A8A3AC000ABF9AB /* FirebaseDynamicLinks in Frameworks */ = {isa = PBXBuildFile; productRef = E72CD0532A8A3AC000ABF9AB /* FirebaseDynamicLinks */; };
+		E72CD0562A8A3AC000ABF9AB /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = E72CD0552A8A3AC000ABF9AB /* FirebaseFirestore */; };
+		E72CD0582A8A3AC000ABF9AB /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = E72CD0572A8A3AC000ABF9AB /* FirebaseFirestoreCombine-Community */; };
+		E72CD05A2A8A3AC000ABF9AB /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E72CD0592A8A3AC000ABF9AB /* FirebaseFirestoreSwift */; };
+		E72CD0602A8A3AC000ABF9AB /* FirebaseInstallations in Frameworks */ = {isa = PBXBuildFile; productRef = E72CD05F2A8A3AC000ABF9AB /* FirebaseInstallations */; };
+		E72CD0622A8A3AC000ABF9AB /* FirebaseMLModelDownloader in Frameworks */ = {isa = PBXBuildFile; productRef = E72CD0612A8A3AC000ABF9AB /* FirebaseMLModelDownloader */; };
+		E72CD0662A8A3AC000ABF9AB /* FirebasePerformance in Frameworks */ = {isa = PBXBuildFile; productRef = E72CD0652A8A3AC000ABF9AB /* FirebasePerformance */; };
+		E72CD0682A8A3AC000ABF9AB /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = E72CD0672A8A3AC000ABF9AB /* FirebaseRemoteConfig */; };
+		E72CD06A2A8A3AC000ABF9AB /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E72CD0692A8A3AC000ABF9AB /* FirebaseRemoteConfigSwift */; };
+		E72CD06C2A8A3AC000ABF9AB /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = E72CD06B2A8A3AC000ABF9AB /* FirebaseStorage */; };
+		E72CD06E2A8A3AC000ABF9AB /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = E72CD06D2A8A3AC000ABF9AB /* FirebaseStorageCombine-Community */; };
+		E72CD0712A8A3AE400ABF9AB /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = E72CD0702A8A3AE400ABF9AB /* SDWebImageSwiftUI */; };
+		E72CD0732A8A3E3800ABF9AB /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72CD0722A8A3E3800ABF9AB /* View+Extensions.swift */; };
+		E72CD0772A8A3FE600ABF9AB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72CD0752A8A3FE600ABF9AB /* User.swift */; };
+		E72CD0782A8A3FE600ABF9AB /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72CD0762A8A3FE600ABF9AB /* Post.swift */; };
+		E72CD07A2A8B625E00ABF9AB /* CreateNewPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72CD0792A8B625E00ABF9AB /* CreateNewPost.swift */; };
+		E73673542A90493B004D5720 /* EventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73673532A90493B004D5720 /* EventView.swift */; };
+		E73673562A904B04004D5720 /* NewEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73673552A904B04004D5720 /* NewEventView.swift */; };
+		E738D0182A9051EA0040A22D /* SwiftUIDatePickerDialog in Frameworks */ = {isa = PBXBuildFile; productRef = E738D0172A9051EA0040A22D /* SwiftUIDatePickerDialog */; };
+		E738D01A2A9071D90040A22D /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E738D0192A9071D90040A22D /* VideoView.swift */; };
 		E7471A412A7C27DF00C56D01 /* PostsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7471A402A7C27DF00C56D01 /* PostsView.swift */; };
 		E7471A432A7C295400C56D01 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7471A422A7C295400C56D01 /* BaseView.swift */; };
 		E7471A482A7C2A3300C56D01 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7471A462A7C2A3300C56D01 /* BaseViewModel.swift */; };
@@ -27,12 +51,42 @@
 		E77A99762A76D1F700799CDD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77A99752A76D1F700799CDD /* ContentView.swift */; };
 		E77A99782A76D1F900799CDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E77A99772A76D1F900799CDD /* Assets.xcassets */; };
 		E77A997B2A76D1F900799CDD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E77A997A2A76D1F900799CDD /* Preview Assets.xcassets */; };
+		E784A3FD2A8FE8420056DD06 /* RewindView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E784A3FC2A8FE8420056DD06 /* RewindView.swift */; };
 		E78B16592A8027D100DDF409 /* SelectAvatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78B16582A8027D000DDF409 /* SelectAvatar.swift */; };
+		E7BB8BD92A8B65CF00E7E69A /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BB8BD82A8B65CF00E7E69A /* PostViewModel.swift */; };
+		E7BB8BE42A8B807900E7E69A /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BB8BE32A8B807900E7E69A /* LoadingView.swift */; };
+		E7BB8BE62A8B811E00E7E69A /* PostsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BB8BE52A8B811E00E7E69A /* PostsListViewModel.swift */; };
+		E7BB8BE82A8BB2AA00E7E69A /* CreatePostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BB8BE72A8BB2AA00E7E69A /* CreatePostViewModel.swift */; };
+		E7BB8BED2A8BC73A00E7E69A /* CreateNewPostCam.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BB8BEC2A8BC73A00E7E69A /* CreateNewPostCam.swift */; };
+		E7BB8BF02A8BC8C700E7E69A /* SwiftUICam in Frameworks */ = {isa = PBXBuildFile; productRef = E7BB8BEF2A8BC8C700E7E69A /* SwiftUICam */; };
+		E7C59B862A8CF1FE00942CC5 /* MonsterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C59B852A8CF1FE00942CC5 /* MonsterView.swift */; };
+		E7C59B882A8D04BA00942CC5 /* ShakeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C59B872A8D04B900942CC5 /* ShakeViewController.swift */; };
+		E7C59B8B2A8D4F0400942CC5 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7C59B8A2A8D4F0400942CC5 /* CoreMotion.framework */; };
+		E7C59B8D2A8D4FB500942CC5 /* ShakeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C59B8C2A8D4FB500942CC5 /* ShakeView.swift */; };
+		E7C59B8F2A8D516900942CC5 /* ModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C59B8E2A8D516900942CC5 /* ModalView.swift */; };
+		E7C59B922A8D535D00942CC5 /* PopupView in Frameworks */ = {isa = PBXBuildFile; productRef = E7C59B912A8D535D00942CC5 /* PopupView */; };
+		E7C59B952A8D58E200942CC5 /* FloatingButton in Frameworks */ = {isa = PBXBuildFile; productRef = E7C59B942A8D58E200942CC5 /* FloatingButton */; };
+		E7CE7B112A8A285000843854 /* SelectRole.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CE7B102A8A284F00843854 /* SelectRole.swift */; };
+		E7CE7B142A8A354A00843854 /* PostCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CE7B122A8A354A00843854 /* PostCardView.swift */; };
+		E7CE7B152A8A354A00843854 /* ReusablePostsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CE7B132A8A354A00843854 /* ReusablePostsView.swift */; };
+		E7D47F2E2A8BF4DA006F2C47 /* SwiftUICamPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D47F2D2A8BF4DA006F2C47 /* SwiftUICamPreview.swift */; };
+		E7D47F312A8C07C5006F2C47 /* VoiceRecorderKit in Frameworks */ = {isa = PBXBuildFile; productRef = E7D47F302A8C07C5006F2C47 /* VoiceRecorderKit */; };
+		E7DD01EB2A8CB23500C1E700 /* RecordAudioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DD01E82A8CB23400C1E700 /* RecordAudioView.swift */; };
+		E7DD01EC2A8CB23500C1E700 /* AudioRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DD01E92A8CB23500C1E700 /* AudioRecorder.swift */; };
+		E7DD01ED2A8CB23500C1E700 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DD01EA2A8CB23500C1E700 /* AudioPlayer.swift */; };
+		E7E7C2002A8EFB6C002992BA /* Camera-SwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = E7E7C1FF2A8EFB6C002992BA /* Camera-SwiftUI */; };
+		E7E7C2022A8F0C63002992BA /* CreateNewPostCamBak.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E7C2012A8F0C63002992BA /* CreateNewPostCamBak.swift */; };
+		E7E7C20A2A8F0CB4002992BA /* CameraService+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E7C2042A8F0CB4002992BA /* CameraService+Extensions.swift */; };
+		E7E7C20B2A8F0CB4002992BA /* CameraService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E7C2052A8F0CB4002992BA /* CameraService.swift */; };
+		E7E7C20C2A8F0CB4002992BA /* CameraPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E7C2062A8F0CB4002992BA /* CameraPreview.swift */; };
+		E7E7C20D2A8F0CB4002992BA /* ImageResizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E7C2072A8F0CB4002992BA /* ImageResizer.swift */; };
+		E7E7C20E2A8F0CB4002992BA /* PhotoCaptureProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E7C2082A8F0CB4002992BA /* PhotoCaptureProcessor.swift */; };
+		E7E7C20F2A8F0CB4002992BA /* CameraService+Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E7C2092A8F0CB4002992BA /* CameraService+Enums.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E709C30F2A7FFDDA009D5BE2 /* ParingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParingView.swift; sourceTree = "<group>"; };
-		E709C3112A8006E9009D5BE2 /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		E709C3112A8006E9009D5BE2 /* AccountCreationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountCreationViewModel.swift; sourceTree = "<group>"; };
 		E70DA4CB2A81275900136309 /* LaunchScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchScreenView.swift; sourceTree = "<group>"; };
 		E715127F2A79738200F2408D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E71512812A7975DF00F2408D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -42,6 +96,13 @@
 		E71512872A797C9000F2408D /* Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		E71512892A797C9000F2408D /* LoadingScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingScreen.swift; sourceTree = "<group>"; };
 		E715128A2A797C9000F2408D /* Register.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
+		E72CD0722A8A3E3800ABF9AB /* View+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
+		E72CD0752A8A3FE600ABF9AB /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		E72CD0762A8A3FE600ABF9AB /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		E72CD0792A8B625E00ABF9AB /* CreateNewPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateNewPost.swift; sourceTree = "<group>"; };
+		E73673532A90493B004D5720 /* EventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventView.swift; sourceTree = "<group>"; };
+		E73673552A904B04004D5720 /* NewEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEventView.swift; sourceTree = "<group>"; };
+		E738D0192A9071D90040A22D /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
 		E7471A402A7C27DF00C56D01 /* PostsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsView.swift; sourceTree = "<group>"; };
 		E7471A422A7C295400C56D01 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		E7471A462A7C2A3300C56D01 /* BaseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
@@ -51,7 +112,32 @@
 		E77A99752A76D1F700799CDD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E77A99772A76D1F900799CDD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E77A997A2A76D1F900799CDD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E784A3FC2A8FE8420056DD06 /* RewindView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewindView.swift; sourceTree = "<group>"; };
 		E78B16582A8027D000DDF409 /* SelectAvatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAvatar.swift; sourceTree = "<group>"; };
+		E7BB8BD82A8B65CF00E7E69A /* PostViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
+		E7BB8BE32A8B807900E7E69A /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		E7BB8BE52A8B811E00E7E69A /* PostsListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostsListViewModel.swift; sourceTree = "<group>"; };
+		E7BB8BE72A8BB2AA00E7E69A /* CreatePostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostViewModel.swift; sourceTree = "<group>"; };
+		E7BB8BEC2A8BC73A00E7E69A /* CreateNewPostCam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewPostCam.swift; sourceTree = "<group>"; };
+		E7C59B852A8CF1FE00942CC5 /* MonsterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterView.swift; sourceTree = "<group>"; };
+		E7C59B872A8D04B900942CC5 /* ShakeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeViewController.swift; sourceTree = "<group>"; };
+		E7C59B8A2A8D4F0400942CC5 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		E7C59B8C2A8D4FB500942CC5 /* ShakeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeView.swift; sourceTree = "<group>"; };
+		E7C59B8E2A8D516900942CC5 /* ModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalView.swift; sourceTree = "<group>"; };
+		E7CE7B102A8A284F00843854 /* SelectRole.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectRole.swift; sourceTree = "<group>"; };
+		E7CE7B122A8A354A00843854 /* PostCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCardView.swift; sourceTree = "<group>"; };
+		E7CE7B132A8A354A00843854 /* ReusablePostsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusablePostsView.swift; sourceTree = "<group>"; };
+		E7D47F2D2A8BF4DA006F2C47 /* SwiftUICamPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUICamPreview.swift; sourceTree = "<group>"; };
+		E7DD01E82A8CB23400C1E700 /* RecordAudioView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordAudioView.swift; sourceTree = "<group>"; };
+		E7DD01E92A8CB23500C1E700 /* AudioRecorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioRecorder.swift; sourceTree = "<group>"; };
+		E7DD01EA2A8CB23500C1E700 /* AudioPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
+		E7E7C2012A8F0C63002992BA /* CreateNewPostCamBak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewPostCamBak.swift; sourceTree = "<group>"; };
+		E7E7C2042A8F0CB4002992BA /* CameraService+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "CameraService+Extensions.swift"; path = "../../../../../../../Downloads/SwiftCamera-main/SwiftCamera/CameraService+Extensions.swift"; sourceTree = "<group>"; };
+		E7E7C2052A8F0CB4002992BA /* CameraService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CameraService.swift; path = "../../../../../../../Downloads/SwiftCamera-main/SwiftCamera/CameraService.swift"; sourceTree = "<group>"; };
+		E7E7C2062A8F0CB4002992BA /* CameraPreview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CameraPreview.swift; path = "../../../../../../../Downloads/SwiftCamera-main/SwiftCamera/CameraPreview.swift"; sourceTree = "<group>"; };
+		E7E7C2072A8F0CB4002992BA /* ImageResizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageResizer.swift; path = "../../../../../../../Downloads/SwiftCamera-main/SwiftCamera/ImageResizer.swift"; sourceTree = "<group>"; };
+		E7E7C2082A8F0CB4002992BA /* PhotoCaptureProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotoCaptureProcessor.swift; path = "../../../../../../../Downloads/SwiftCamera-main/SwiftCamera/PhotoCaptureProcessor.swift"; sourceTree = "<group>"; };
+		E7E7C2092A8F0CB4002992BA /* CameraService+Enums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "CameraService+Enums.swift"; path = "../../../../../../../Downloads/SwiftCamera-main/SwiftCamera/CameraService+Enums.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +145,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7D47F312A8C07C5006F2C47 /* VoiceRecorderKit in Frameworks */,
+				E72CD0712A8A3AE400ABF9AB /* SDWebImageSwiftUI in Frameworks */,
+				E7C59B952A8D58E200942CC5 /* FloatingButton in Frameworks */,
+				E72CD0522A8A3AC000ABF9AB /* FirebaseDatabaseSwift in Frameworks */,
+				E72CD0502A8A3AC000ABF9AB /* FirebaseDatabase in Frameworks */,
+				E72CD06E2A8A3AC000ABF9AB /* FirebaseStorageCombine-Community in Frameworks */,
+				E738D0182A9051EA0040A22D /* SwiftUIDatePickerDialog in Frameworks */,
+				E72CD0602A8A3AC000ABF9AB /* FirebaseInstallations in Frameworks */,
+				E72CD06A2A8A3AC000ABF9AB /* FirebaseRemoteConfigSwift in Frameworks */,
+				E7C59B8B2A8D4F0400942CC5 /* CoreMotion.framework in Frameworks */,
 				E74DFF3B2A80186B00454134 /* CodeScanner in Frameworks */,
+				E72CD0682A8A3AC000ABF9AB /* FirebaseRemoteConfig in Frameworks */,
+				E72CD0582A8A3AC000ABF9AB /* FirebaseFirestoreCombine-Community in Frameworks */,
+				E7C59B922A8D535D00942CC5 /* PopupView in Frameworks */,
+				E72CD0662A8A3AC000ABF9AB /* FirebasePerformance in Frameworks */,
+				E72CD06C2A8A3AC000ABF9AB /* FirebaseStorage in Frameworks */,
+				E72CD05A2A8A3AC000ABF9AB /* FirebaseFirestoreSwift in Frameworks */,
+				E7BB8BF02A8BC8C700E7E69A /* SwiftUICam in Frameworks */,
+				E72CD04C2A8A3AC000ABF9AB /* FirebaseAuthCombine-Community in Frameworks */,
+				E72CD0562A8A3AC000ABF9AB /* FirebaseFirestore in Frameworks */,
+				E7E7C2002A8EFB6C002992BA /* Camera-SwiftUI in Frameworks */,
+				E72CD0542A8A3AC000ABF9AB /* FirebaseDynamicLinks in Frameworks */,
+				E72CD04A2A8A3AC000ABF9AB /* FirebaseAuth in Frameworks */,
+				E72CD0622A8A3AC000ABF9AB /* FirebaseMLModelDownloader in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +185,15 @@
 			path = Test;
 			sourceTree = "<group>";
 		};
+		E72CD0742A8A3FE600ABF9AB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E72CD0752A8A3FE600ABF9AB /* User.swift */,
+				E72CD0762A8A3FE600ABF9AB /* Post.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		E7471A3F2A7C27C300C56D01 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +201,7 @@
 				E74DFF372A800CBB00454134 /* LoginSegmentTabs.swift */,
 				E71512872A797C9000F2408D /* Login.swift */,
 				E78B16582A8027D000DDF409 /* SelectAvatar.swift */,
+				E7CE7B102A8A284F00843854 /* SelectRole.swift */,
 				E715128A2A797C9000F2408D /* Register.swift */,
 				E709C30F2A7FFDDA009D5BE2 /* ParingView.swift */,
 			);
@@ -92,8 +211,11 @@
 		E7471A452A7C2A3300C56D01 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				E709C3112A8006E9009D5BE2 /* AccountCreationViewModel.swift */,
 				E7471A462A7C2A3300C56D01 /* BaseViewModel.swift */,
-				E709C3112A8006E9009D5BE2 /* LoginViewModel.swift */,
+				E7BB8BD82A8B65CF00E7E69A /* PostViewModel.swift */,
+				E7BB8BE72A8BB2AA00E7E69A /* CreatePostViewModel.swift */,
+				E7BB8BE52A8B811E00E7E69A /* PostsListViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -101,7 +223,13 @@
 		E7471A492A7C324E00C56D01 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				E7DD01EA2A8CB23500C1E700 /* AudioPlayer.swift */,
+				E7DD01E92A8CB23500C1E700 /* AudioRecorder.swift */,
 				E71512862A797C9000F2408D /* CustomCorner.swift */,
+				E7C59B872A8D04B900942CC5 /* ShakeViewController.swift */,
+				E7C59B8C2A8D4FB500942CC5 /* ShakeView.swift */,
+				E7C59B8E2A8D516900942CC5 /* ModalView.swift */,
+				E72CD0722A8A3E3800ABF9AB /* View+Extensions.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -112,6 +240,7 @@
 				E77A99722A76D1F700799CDD /* BaeMoments */,
 				E70DA4CB2A81275900136309 /* LaunchScreenView.swift */,
 				E77A99712A76D1F700799CDD /* Products */,
+				E7C59B892A8D4F0400942CC5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -129,10 +258,18 @@
 				E77A99732A76D1F700799CDD /* BaeMomentsApp.swift */,
 				E77A99752A76D1F700799CDD /* ContentView.swift */,
 				E7471A492A7C324E00C56D01 /* Util */,
-				E7471A3F2A7C27C300C56D01 /* Login */,
-				E7471A402A7C27DF00C56D01 /* PostsView.swift */,
-				E7471A422A7C295400C56D01 /* BaseView.swift */,
+				E72CD0742A8A3FE600ABF9AB /* Model */,
 				E7471A452A7C2A3300C56D01 /* ViewModel */,
+				E7471A3F2A7C27C300C56D01 /* Login */,
+				E7471A422A7C295400C56D01 /* BaseView.swift */,
+				E7BB8BE32A8B807900E7E69A /* LoadingView.swift */,
+				E738D0192A9071D90040A22D /* VideoView.swift */,
+				E7C59B852A8CF1FE00942CC5 /* MonsterView.swift */,
+				E73673532A90493B004D5720 /* EventView.swift */,
+				E73673552A904B04004D5720 /* NewEventView.swift */,
+				E784A3FC2A8FE8420056DD06 /* RewindView.swift */,
+				E7CE7B162A8A354F00843854 /* PostView */,
+				E7E7C2102A8F437F002992BA /* CreatePostView */,
 				E71512912A797C9800F2408D /* Test */,
 				E715127F2A79738200F2408D /* GoogleService-Info.plist */,
 				E77A99772A76D1F900799CDD /* Assets.xcassets */,
@@ -147,6 +284,50 @@
 				E77A997A2A76D1F900799CDD /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E7C59B892A8D4F0400942CC5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E7C59B8A2A8D4F0400942CC5 /* CoreMotion.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E7CE7B162A8A354F00843854 /* PostView */ = {
+			isa = PBXGroup;
+			children = (
+				E7471A402A7C27DF00C56D01 /* PostsView.swift */,
+				E7CE7B122A8A354A00843854 /* PostCardView.swift */,
+				E7CE7B132A8A354A00843854 /* ReusablePostsView.swift */,
+			);
+			path = PostView;
+			sourceTree = "<group>";
+		};
+		E7E7C2032A8F0CA7002992BA /* Cameras */ = {
+			isa = PBXGroup;
+			children = (
+				E7E7C2062A8F0CB4002992BA /* CameraPreview.swift */,
+				E7E7C2052A8F0CB4002992BA /* CameraService.swift */,
+				E7E7C2092A8F0CB4002992BA /* CameraService+Enums.swift */,
+				E7E7C2042A8F0CB4002992BA /* CameraService+Extensions.swift */,
+				E7E7C2072A8F0CB4002992BA /* ImageResizer.swift */,
+				E7E7C2082A8F0CB4002992BA /* PhotoCaptureProcessor.swift */,
+			);
+			path = Cameras;
+			sourceTree = "<group>";
+		};
+		E7E7C2102A8F437F002992BA /* CreatePostView */ = {
+			isa = PBXGroup;
+			children = (
+				E7BB8BEC2A8BC73A00E7E69A /* CreateNewPostCam.swift */,
+				E7E7C2032A8F0CA7002992BA /* Cameras */,
+				E7E7C2012A8F0C63002992BA /* CreateNewPostCamBak.swift */,
+				E7D47F2D2A8BF4DA006F2C47 /* SwiftUICamPreview.swift */,
+				E72CD0792A8B625E00ABF9AB /* CreateNewPost.swift */,
+				E7DD01E82A8CB23400C1E700 /* RecordAudioView.swift */,
+			);
+			path = CreatePostView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,6 +348,28 @@
 			name = BaeMoments;
 			packageProductDependencies = (
 				E74DFF3A2A80186B00454134 /* CodeScanner */,
+				E72CD0492A8A3AC000ABF9AB /* FirebaseAuth */,
+				E72CD04B2A8A3AC000ABF9AB /* FirebaseAuthCombine-Community */,
+				E72CD04F2A8A3AC000ABF9AB /* FirebaseDatabase */,
+				E72CD0512A8A3AC000ABF9AB /* FirebaseDatabaseSwift */,
+				E72CD0532A8A3AC000ABF9AB /* FirebaseDynamicLinks */,
+				E72CD0552A8A3AC000ABF9AB /* FirebaseFirestore */,
+				E72CD0572A8A3AC000ABF9AB /* FirebaseFirestoreCombine-Community */,
+				E72CD0592A8A3AC000ABF9AB /* FirebaseFirestoreSwift */,
+				E72CD05F2A8A3AC000ABF9AB /* FirebaseInstallations */,
+				E72CD0612A8A3AC000ABF9AB /* FirebaseMLModelDownloader */,
+				E72CD0652A8A3AC000ABF9AB /* FirebasePerformance */,
+				E72CD0672A8A3AC000ABF9AB /* FirebaseRemoteConfig */,
+				E72CD0692A8A3AC000ABF9AB /* FirebaseRemoteConfigSwift */,
+				E72CD06B2A8A3AC000ABF9AB /* FirebaseStorage */,
+				E72CD06D2A8A3AC000ABF9AB /* FirebaseStorageCombine-Community */,
+				E72CD0702A8A3AE400ABF9AB /* SDWebImageSwiftUI */,
+				E7BB8BEF2A8BC8C700E7E69A /* SwiftUICam */,
+				E7D47F302A8C07C5006F2C47 /* VoiceRecorderKit */,
+				E7C59B912A8D535D00942CC5 /* PopupView */,
+				E7C59B942A8D58E200942CC5 /* FloatingButton */,
+				E7E7C1FF2A8EFB6C002992BA /* Camera-SwiftUI */,
+				E738D0172A9051EA0040A22D /* SwiftUIDatePickerDialog */,
 			);
 			productName = BaeMoments;
 			productReference = E77A99702A76D1F700799CDD /* BaeMoments.app */;
@@ -198,6 +401,14 @@
 			mainGroup = E77A99672A76D1F700799CDD;
 			packageReferences = (
 				E74DFF392A80186B00454134 /* XCRemoteSwiftPackageReference "CodeScanner" */,
+				E72CD0482A8A3AC000ABF9AB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				E72CD06F2A8A3AE400ABF9AB /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+				E7BB8BEE2A8BC8C700E7E69A /* XCRemoteSwiftPackageReference "SwiftUICam" */,
+				E7D47F2F2A8C07C4006F2C47 /* XCRemoteSwiftPackageReference "VoiceRecorderKit" */,
+				E7C59B902A8D535D00942CC5 /* XCRemoteSwiftPackageReference "PopupView" */,
+				E7C59B932A8D58E200942CC5 /* XCRemoteSwiftPackageReference "FloatingButton" */,
+				E7E7C1FE2A8EFB6C002992BA /* XCRemoteSwiftPackageReference "Camera-SwiftUI" */,
+				E738D0162A9051EA0040A22D /* XCRemoteSwiftPackageReference "swiftui-date-picker-dialog" */,
 			);
 			productRefGroup = E77A99712A76D1F700799CDD /* Products */;
 			projectDirPath = "";
@@ -226,20 +437,51 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7E7C20C2A8F0CB4002992BA /* CameraPreview.swift in Sources */,
+				E7E7C20B2A8F0CB4002992BA /* CameraService.swift in Sources */,
+				E7BB8BD92A8B65CF00E7E69A /* PostViewModel.swift in Sources */,
 				E715128D2A797C9000F2408D /* Login.swift in Sources */,
+				E7DD01ED2A8CB23500C1E700 /* AudioPlayer.swift in Sources */,
 				E71512842A797C4F00F2408D /* TestView.swift in Sources */,
+				E7C59B8F2A8D516900942CC5 /* ModalView.swift in Sources */,
+				E7C59B862A8CF1FE00942CC5 /* MonsterView.swift in Sources */,
+				E7BB8BED2A8BC73A00E7E69A /* CreateNewPostCam.swift in Sources */,
+				E7BB8BE62A8B811E00E7E69A /* PostsListViewModel.swift in Sources */,
 				E71512822A7975DF00F2408D /* LoginView.swift in Sources */,
 				E715128B2A797C9000F2408D /* ImagePicker.swift in Sources */,
+				E73673562A904B04004D5720 /* NewEventView.swift in Sources */,
 				E70DA4CD2A81275900136309 /* LaunchScreenView.swift in Sources */,
+				E7CE7B152A8A354A00843854 /* ReusablePostsView.swift in Sources */,
+				E7CE7B142A8A354A00843854 /* PostCardView.swift in Sources */,
 				E71512902A797C9000F2408D /* Register.swift in Sources */,
+				E7E7C20D2A8F0CB4002992BA /* ImageResizer.swift in Sources */,
+				E7E7C20F2A8F0CB4002992BA /* CameraService+Enums.swift in Sources */,
 				E715128C2A797C9000F2408D /* CustomCorner.swift in Sources */,
-				E709C3122A8006E9009D5BE2 /* LoginViewModel.swift in Sources */,
+				E784A3FD2A8FE8420056DD06 /* RewindView.swift in Sources */,
+				E709C3122A8006E9009D5BE2 /* AccountCreationViewModel.swift in Sources */,
+				E7BB8BE42A8B807900E7E69A /* LoadingView.swift in Sources */,
+				E72CD07A2A8B625E00ABF9AB /* CreateNewPost.swift in Sources */,
+				E72CD0772A8A3FE600ABF9AB /* User.swift in Sources */,
+				E7E7C20A2A8F0CB4002992BA /* CameraService+Extensions.swift in Sources */,
+				E72CD0732A8A3E3800ABF9AB /* View+Extensions.swift in Sources */,
+				E72CD0782A8A3FE600ABF9AB /* Post.swift in Sources */,
+				E7E7C20E2A8F0CB4002992BA /* PhotoCaptureProcessor.swift in Sources */,
+				E7C59B882A8D04BA00942CC5 /* ShakeViewController.swift in Sources */,
 				E7471A482A7C2A3300C56D01 /* BaseViewModel.swift in Sources */,
 				E77A99762A76D1F700799CDD /* ContentView.swift in Sources */,
+				E7D47F2E2A8BF4DA006F2C47 /* SwiftUICamPreview.swift in Sources */,
+				E7DD01EB2A8CB23500C1E700 /* RecordAudioView.swift in Sources */,
+				E7DD01EC2A8CB23500C1E700 /* AudioRecorder.swift in Sources */,
 				E77A99742A76D1F700799CDD /* BaeMomentsApp.swift in Sources */,
+				E73673542A90493B004D5720 /* EventView.swift in Sources */,
+				E738D01A2A9071D90040A22D /* VideoView.swift in Sources */,
+				E7C59B8D2A8D4FB500942CC5 /* ShakeView.swift in Sources */,
+				E7BB8BE82A8BB2AA00E7E69A /* CreatePostViewModel.swift in Sources */,
 				E709C3102A7FFDDA009D5BE2 /* ParingView.swift in Sources */,
 				E7471A412A7C27DF00C56D01 /* PostsView.swift in Sources */,
+				E7CE7B112A8A285000843854 /* SelectRole.swift in Sources */,
 				E78B16592A8027D100DDF409 /* SelectAvatar.swift in Sources */,
+				E7E7C2022A8F0C63002992BA /* CreateNewPostCamBak.swift in Sources */,
 				E74DFF382A800CBB00454134 /* LoginSegmentTabs.swift in Sources */,
 				E7471A432A7C295400C56D01 /* BaseView.swift in Sources */,
 				E715128F2A797C9000F2408D /* LoadingScreen.swift in Sources */,
@@ -380,11 +622,14 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "We need to scan the QR code and take a photo through the camera.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "我要你愛";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "我要你愛";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -410,11 +655,14 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "We need to scan the QR code and take a photo through the camera.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "我要你愛";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "我要你愛";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -452,6 +700,30 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		E72CD0482A8A3AC000ABF9AB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.13.0;
+			};
+		};
+		E72CD06F2A8A3AE400ABF9AB /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.2.3;
+			};
+		};
+		E738D0162A9051EA0040A22D /* XCRemoteSwiftPackageReference "swiftui-date-picker-dialog" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/globulus/swiftui-date-picker-dialog";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 		E74DFF392A80186B00454134 /* XCRemoteSwiftPackageReference "CodeScanner" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/twostraws/CodeScanner";
@@ -460,13 +732,163 @@
 				minimumVersion = 2.3.3;
 			};
 		};
+		E7BB8BEE2A8BC8C700E7E69A /* XCRemoteSwiftPackageReference "SwiftUICam" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/vGebs/SwiftUICam";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.2;
+			};
+		};
+		E7C59B902A8D535D00942CC5 /* XCRemoteSwiftPackageReference "PopupView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/exyte/PopupView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.6.0;
+			};
+		};
+		E7C59B932A8D58E200942CC5 /* XCRemoteSwiftPackageReference "FloatingButton" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/exyte/FloatingButton.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.5;
+			};
+		};
+		E7D47F2F2A8C07C4006F2C47 /* XCRemoteSwiftPackageReference "VoiceRecorderKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devdchaudhary/VoiceRecorderKit";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		E7E7C1FE2A8EFB6C002992BA /* XCRemoteSwiftPackageReference "Camera-SwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/rorodriguez116/Camera-SwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.5.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		E72CD0492A8A3AC000ABF9AB /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E72CD0482A8A3AC000ABF9AB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		E72CD04B2A8A3AC000ABF9AB /* FirebaseAuthCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E72CD0482A8A3AC000ABF9AB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseAuthCombine-Community";
+		};
+		E72CD04F2A8A3AC000ABF9AB /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E72CD0482A8A3AC000ABF9AB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		E72CD0512A8A3AC000ABF9AB /* FirebaseDatabaseSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E72CD0482A8A3AC000ABF9AB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabaseSwift;
+		};
+		E72CD0532A8A3AC000ABF9AB /* FirebaseDynamicLinks */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E72CD0482A8A3AC000ABF9AB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDynamicLinks;
+		};
+		E72CD0552A8A3AC000ABF9AB /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E72CD0482A8A3AC000ABF9AB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		E72CD0572A8A3AC000ABF9AB /* FirebaseFirestoreCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E72CD0482A8A3AC000ABF9AB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseFirestoreCombine-Community";
+		};
+		E72CD0592A8A3AC000ABF9AB /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E72CD0482A8A3AC000ABF9AB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+		E72CD05F2A8A3AC000ABF9AB /* FirebaseInstallations */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E72CD0482A8A3AC000ABF9AB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseInstallations;
+		};
+		E72CD0612A8A3AC000ABF9AB /* FirebaseMLModelDownloader */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E72CD0482A8A3AC000ABF9AB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMLModelDownloader;
+		};
+		E72CD0652A8A3AC000ABF9AB /* FirebasePerformance */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E72CD0482A8A3AC000ABF9AB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebasePerformance;
+		};
+		E72CD0672A8A3AC000ABF9AB /* FirebaseRemoteConfig */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E72CD0482A8A3AC000ABF9AB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseRemoteConfig;
+		};
+		E72CD0692A8A3AC000ABF9AB /* FirebaseRemoteConfigSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E72CD0482A8A3AC000ABF9AB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseRemoteConfigSwift;
+		};
+		E72CD06B2A8A3AC000ABF9AB /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E72CD0482A8A3AC000ABF9AB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+		E72CD06D2A8A3AC000ABF9AB /* FirebaseStorageCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E72CD0482A8A3AC000ABF9AB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseStorageCombine-Community";
+		};
+		E72CD0702A8A3AE400ABF9AB /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E72CD06F2A8A3AE400ABF9AB /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+		E738D0172A9051EA0040A22D /* SwiftUIDatePickerDialog */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E738D0162A9051EA0040A22D /* XCRemoteSwiftPackageReference "swiftui-date-picker-dialog" */;
+			productName = SwiftUIDatePickerDialog;
+		};
 		E74DFF3A2A80186B00454134 /* CodeScanner */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = E74DFF392A80186B00454134 /* XCRemoteSwiftPackageReference "CodeScanner" */;
 			productName = CodeScanner;
+		};
+		E7BB8BEF2A8BC8C700E7E69A /* SwiftUICam */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E7BB8BEE2A8BC8C700E7E69A /* XCRemoteSwiftPackageReference "SwiftUICam" */;
+			productName = SwiftUICam;
+		};
+		E7C59B912A8D535D00942CC5 /* PopupView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E7C59B902A8D535D00942CC5 /* XCRemoteSwiftPackageReference "PopupView" */;
+			productName = PopupView;
+		};
+		E7C59B942A8D58E200942CC5 /* FloatingButton */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E7C59B932A8D58E200942CC5 /* XCRemoteSwiftPackageReference "FloatingButton" */;
+			productName = FloatingButton;
+		};
+		E7D47F302A8C07C5006F2C47 /* VoiceRecorderKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E7D47F2F2A8C07C4006F2C47 /* XCRemoteSwiftPackageReference "VoiceRecorderKit" */;
+			productName = VoiceRecorderKit;
+		};
+		E7E7C1FF2A8EFB6C002992BA /* Camera-SwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E7E7C1FE2A8EFB6C002992BA /* XCRemoteSwiftPackageReference "Camera-SwiftUI" */;
+			productName = "Camera-SwiftUI";
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

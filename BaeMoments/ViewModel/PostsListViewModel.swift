@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Firebase
+import Foundation
 import Combine
 
 class PostsListViewModel: ObservableObject {
@@ -17,11 +18,16 @@ class PostsListViewModel: ObservableObject {
     private var basedOnUID: Bool = false
     private var uid: String = ""
     
-    init() {
-            Task {
-                await self.refreshPosts()
-            }
-        }
+//    init() {
+//            Task {
+//                await self.refreshPosts()
+//            }
+//        }
+    
+    func addNewPost(_ post: Post) {
+        // Add the new post to the posts array
+        self.posts.insert(post, at: 0)
+    }
     
     func setup(uid: String, basedOnUID: Bool) {
         self.uid = uid
@@ -63,10 +69,12 @@ class PostsListViewModel: ObservableObject {
     }
     
     func refreshPosts() async {
+        print("refreshing")
         self.isFetching = true
         self.posts = []
         self.paginationDoc = nil
         await fetchPosts()
+        print(posts)
     }
 }
 

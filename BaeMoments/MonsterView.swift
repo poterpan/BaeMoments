@@ -6,63 +6,120 @@
 //
 
 import SwiftUI
+import Combine
 
-struct PostsView: View {
-//    @State private var recentsPosts: [Post] = []
-    @State private var createNewPost: Bool = false
-    @EnvironmentObject var postsListViewModel: PostsListViewModel
+struct MonsterView: View {
+    @ObservedObject var viewModel = CharacterViewModel()
 
+    @State private var progressValue: Float = 0.5
     
+    var level: Int {
+        viewModel.calculateLevelAndPercentage().level
+    }
+    
+    var percentage: Double {
+        viewModel.calculateLevelAndPercentage().percentage
+    }
+
     var body: some View {
-        ScrollView {
+        VStack {
+//            let (level, percentage) = viewModel.calculateLevelAndPercentage()
+            Text("我的怪兽")
+                .bold()
+                .font(.custom("Helvetica", size: 24))
+                .padding(30)
             
-            Spacer()
-                .frame(height: 30)
+            Text("Experience Points: \(viewModel.experiencePoints)")
+                .font(.caption)
             
-            // Cover photo...
-            ZStack(alignment: .bottomTrailing) {
-                ZStack(alignment: .topTrailing) {
-                    Rectangle()
-                      .foregroundColor(.clear)
-                      .frame(width: 316, height: 135)
-                      .background(
-                        Image("Family_Portrait01")
-                          .resizable()
-                          .aspectRatio(contentMode: .fill)
-                          .clipped()
-                      )
-                      .cornerRadius(10)
-                      .shadow(color: .black.opacity(0.25), radius: 1, x: 0, y: 2)
-                        
-                    Button {
-                        
-                    } label: {
-                        Image(systemName: "ellipsis")
-                            .padding()
-                            .foregroundColor(.black.opacity(0.6))
+            Image("lv\(level)")
+                .resizable()
+                .scaledToFit()
+                .frame(width: 200)
+            
 
+            Image("shadow")
+                .resizable()
+                .scaledToFit()
+                .frame(width: 200)
+            
+            HStack{
+                Text("LV \(level)")
+                    .font(.system(size:20,weight: .bold))
+                
+                ZStack {
+                    GeometryReader { geometry in
+                        
+                        ZStack(alignment: .leading) {
+                            
+                            RoundedRectangle(cornerRadius: 20)  // 背景圓角視圖
+                                .foregroundColor(Color.gray.opacity(0.3))
+                                .frame(height: 22)
+                            
+                            RoundedRectangle(cornerRadius: 20)  // 進度條視圖
+                                .foregroundColor(Color.yellow)
+                                .frame(width: CGFloat(self.percentage) * geometry.size.width, height: 22)
+                            
+                        }
+                        
                     }
-
-
                 }
-                .frame(maxWidth: .infinity)
+                .padding(.horizontal, 5)
+                .frame(height: 22)
 
-                Image("decorate-6")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 55)
-                    .rotationEffect(Angle(degrees: 4.33))
-                    .offset(x: -20, y: 20)
+                Text("\(Int(percentage*100))%")
+                    .font(.system(size:20,weight: .bold))
+                
             }
+            .padding()
+
             
-            // Posts...
-            ReusablePostsView()
-                .environmentObject(postsListViewModel)
-                .hAlign(.center).vAlign(.center)
+            ScrollView {
+                Button {
+                    viewModel.experiencePoints += 40
+                } label: {
+                    Image("mission1")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 325)
+                }
+
+                Button {
+                    viewModel.experiencePoints += 20
+                } label: {
+                    Image("mission2")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 325)
+                }
+                
+            }
         }
     }
 }
 
 #Preview {
-    BaseView()
+    MonsterView()
+}
+
+class CharacterViewModel: ObservableObject {
+    @Published var experiencePoints: Int = 0
+    
+    func calculateLevelAndPercentage() -> (level: Int, percentage: Double) {
+        var level = 1
+        var nextLevelXP = 100  // Experience points required for Level 1
+        var prevLevelXP = 0
+        
+        // Find the current level based on experience points
+        while experiencePoints >= nextLevelXP {
+            level += 1
+            prevLevelXP = nextLevelXP
+            nextLevelXP *= 2
+        }
+        
+        // Calculate the percentage of completion towards the next level
+        let percentage = ((Double(experiencePoints) - Double(prevLevelXP)) / (Double(nextLevelXP) - Double(prevLevelXP)))
+        
+        return (level, percentage)
+    }
 }

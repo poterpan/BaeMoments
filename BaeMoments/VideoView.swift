@@ -6,23 +6,33 @@
 //
 
 import SwiftUI
+import AVKit
+import AVFoundation
 
-struct LoadingView: View {
-    @Binding var show: Bool
+
+struct VideoPlayerView: View {
+    private let player: AVPlayer
+    @State private var playerError: Error? = nil
+    
+    
+    init(url: URL) {
+        self.player = AVPlayer(url: url)
+        print("player start")
+        self.player.play()
+    }
+    
     var body: some View {
-        ZStack{
-            if show{
-                Group{
-                    Rectangle()
-                        .fill(.black.opacity(0.25))
-                        .ignoresSafeArea()
-                            
-                    ProgressView()
-                        .padding(15)
-                        .background(.white,in: RoundedRectangle(cornerRadius: 10, style: .continuous))
-                }
+        VideoPlayer(player: player)
+            .onAppear() {
+                print("player start")
+                player.play()
             }
-        }
-        .animation(.easeInOut(duration: 0.25), value: show)
+            .onChange(of: player.currentItem?.status, perform: { status in
+                if status == .failed {
+                    playerError = player.currentItem?.error
+                    print("Player error: \(String(describing: playerError))")
+                }
+            })
     }
 }
+

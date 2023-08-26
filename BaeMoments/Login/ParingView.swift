@@ -9,7 +9,7 @@ import SwiftUI
 import CodeScanner
 
 struct ParingView: View {
-    @EnvironmentObject var homeData : LoginViewModel
+    @EnvironmentObject var accountCreation : AccountCreationViewModel
     @State var showQRCode = true
     var body: some View {
         
@@ -93,5 +93,5 @@ struct ParingView: View {
 
 #Preview {
     ParingView()
-        .environmentObject(LoginViewModel())
+        .environmentObject(AccountCreationViewModel())
 }

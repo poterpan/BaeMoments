@@ -30,7 +30,7 @@ struct LaunchScreenView: View {
                     .scaledToFit()
                     .scaledToFit()
                     .scaleEffect(0.1) // 0.5 表示缩小为原始尺寸的一半
-                    .offset(x: -350, y: -500)
+                    .offset(x: -360, y: -510)
                     .offset(x: CGFloat(bounceCount) * 370, y: CGFloat(bounceCount) * CGFloat(bounceCount) * 250) // 根据 bounceCount 控制向右跳跃的距离
                     .onAppear() {
                         bounceImage()

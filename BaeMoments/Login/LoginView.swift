@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct LoginView: View {
-    @EnvironmentObject var homeData : LoginViewModel
+    @EnvironmentObject var accountCreation : AccountCreationViewModel
     
     var body: some View {
         
@@ -25,7 +25,7 @@ struct LoginView: View {
                     VStack {
                         LoginSegmentTabs()
                         Spacer()
-                        if !homeData.gotoRegister {
+                        if !accountCreation.gotoRegister {
                             Login()
                         }
                         else {
@@ -50,6 +50,6 @@ struct LoginView: View {
 
 #Preview {
     LoginView()
-        .environmentObject(LoginViewModel())
+        .environmentObject(AccountCreationViewModel())
 }
 

@@ -9,7 +9,8 @@ import SwiftUI
 
 struct Login: View {
     
-    @State var test = ""
+    @EnvironmentObject var accountCreation : AccountCreationViewModel
+//    @State var test = ""
     
     var body: some View {
         
@@ -25,7 +26,7 @@ struct Login: View {
                         .bold()
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding(.leading, 5)
-                    TextField("", text: $test)
+                    TextField("", text: $accountCreation.emailID)
                         .padding(.vertical,10)
                         .padding(.horizontal)
                         .background(Color("textField"))
@@ -51,7 +52,7 @@ struct Login: View {
                     .bold()
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.leading, 5)
-                TextField("", text: $test)
+                TextField("", text: $accountCreation.password)
                     .padding(.vertical,10)
                     .padding(.horizontal)
                     .background(Color("textField"))
@@ -64,7 +65,7 @@ struct Login: View {
             }
             
             ZStack {
-                Button(action: { print("login") }, label: {
+                Button(action: { accountCreation.loginUser() }, label: {
                     HStack{
                         Text("登入")
                             .font(.title2)
@@ -98,7 +99,7 @@ struct Login: View {
 struct Login_Previews: PreviewProvider {
     static var previews: some View {
         LoginView()
-            .environmentObject(LoginViewModel())
+            .environmentObject(AccountCreationViewModel())
 
     }
 }

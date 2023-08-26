@@ -15,8 +15,8 @@ struct Post: Identifiable,Codable,Equatable,Hashable {
     var imageURL: URL?
     var imageReferenceID: String = ""
     var publishedDate: Date = Date()
-    var likedIDs: [String] = []
-    var dislikedIDs: [String] = []
+    var voiceURL: URL
+    var voiceReferenceID: String
     // MARK: Basic User Info
     var userName: String
     var userUID: String
@@ -27,9 +27,9 @@ struct Post: Identifiable,Codable,Equatable,Hashable {
         case text
         case imageURL
         case imageReferenceID
+        case voiceURL
+        case voiceReferenceID
         case publishedDate
-        case likedIDs
-        case dislikedIDs
         case userName
         case userUID
         case userProfileURL

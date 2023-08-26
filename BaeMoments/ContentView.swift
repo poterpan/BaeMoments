@@ -6,14 +6,23 @@
 //
 
 import SwiftUI
+import SwiftUICam
+
 
 struct ContentView: View {
-    @StateObject var homeData = LoginViewModel()
+    @AppStorage("log_status") var logStatus: Bool = false
+    @StateObject var accountCreation = AccountCreationViewModel()
+    @StateObject var baseData = BaseViewModel()
     
     var body: some View {
-        LoginView()
-            .environmentObject(homeData)
-            
+        if logStatus {
+            BaseView()
+                .environmentObject(baseData)
+                .environmentObject(accountCreation)
+        }else {
+            LoginView()
+                .environmentObject(accountCreation)
+        }
     }
 }
 

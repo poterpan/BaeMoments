@@ -6,10 +6,14 @@
 //
 
 import SwiftUI
+import Firebase
+
 
 @main
 struct BaeMomentsApp: App {
-
+    init(){
+        FirebaseApp.configure()
+    }
     var body: some Scene {
         WindowGroup {
             LaunchScreenView()

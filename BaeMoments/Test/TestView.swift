@@ -38,7 +38,7 @@ struct TestView: View {
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(Color.white.clipShape(CustomCorner(corners: [.topLeft,.topRight])).ignoresSafeArea(.all, edges: .bottom))
         }
-        .background(Color("red")
+        .background(Color("testred")
         .ignoresSafeArea(.all, edges: .all))
         // alert...
         

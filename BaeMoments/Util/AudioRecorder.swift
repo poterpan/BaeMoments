@@ -25,8 +25,8 @@ class AudioRecorder: NSObject, ObservableObject {
 
         let settings = [
             AVFormatIDKey: Int(kAudioFormatMPEG4AAC),
-            AVSampleRateKey: 12000,
-            AVNumberOfChannelsKey: 1,
+            AVSampleRateKey: 44100,
+            AVNumberOfChannelsKey: 2,
             AVEncoderAudioQualityKey: AVAudioQuality.high.rawValue
         ]
         
@@ -58,6 +58,16 @@ class AudioRecorder: NSObject, ObservableObject {
         // Invalidate the timer
         self.timer?.invalidate()
         self.timer = nil
+    }
+    
+    func getVoiceData() -> Data? {
+        do {
+            let voiceData = try Data(contentsOf: self.filePath)
+            return voiceData
+        } catch {
+            print("Failed to load voice data: \(error)")
+            return nil
+        }
     }
 }
 

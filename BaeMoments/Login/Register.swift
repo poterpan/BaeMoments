@@ -9,7 +9,7 @@ import SwiftUI
 import CoreLocation
 
 struct Register: View {
-    @State var test = ""
+    @EnvironmentObject var accountCreation : AccountCreationViewModel
     
     var body: some View {
         
@@ -24,7 +24,7 @@ struct Register: View {
                     .bold()
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.leading, 5)
-                TextField("", text: $test)
+                TextField("", text: $accountCreation.username)
                     .padding(.vertical,10)
                     .padding(.horizontal)
                     .background(Color("textField"))
@@ -43,7 +43,7 @@ struct Register: View {
                     .bold()
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.leading, 5)
-                TextField("", text: $test)
+                TextField("", text: $accountCreation.emailID)
                     .padding(.vertical,10)
                     .padding(.horizontal)
                     .background(Color("textField"))
@@ -63,7 +63,7 @@ struct Register: View {
                     .bold()
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.leading, 5)
-                TextField("", text: $test)
+                TextField("", text: $accountCreation.password)
                     .padding(.vertical,10)
                     .padding(.horizontal)
                     .background(Color("textField"))
@@ -82,7 +82,7 @@ struct Register: View {
                     .bold()
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.leading, 5)
-                TextField("", text: $test)
+                TextField("", text: $accountCreation.reEnter)
                     .padding(.vertical,10)
                     .padding(.horizontal)
                     .background(Color("textField"))
@@ -97,6 +97,7 @@ struct Register: View {
             ZStack {
                 NavigationLink {
                     SelectAvatar()
+                        .environmentObject(accountCreation)
                         
                 } label: {
                     HStack{
@@ -152,6 +153,6 @@ struct Register: View {
 struct Register_Previews: PreviewProvider {
     static var previews: some View {
         LoginView()
-            .environmentObject(LoginViewModel())
+            .environmentObject(AccountCreationViewModel())
     }
 }
